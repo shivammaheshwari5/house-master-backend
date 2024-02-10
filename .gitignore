@@ -1,0 +1,15 @@
+node_modules/*
+package-lock.json
+dist/*
+# /package.json
+logs/*
+.vscode/*
+uploads/*
+.env
+logs/*
+.vscode/*
+uploads/*
+.env/*
+.htaccess
+.DS_Store
+files/*
