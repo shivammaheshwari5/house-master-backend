@@ -3,6 +3,8 @@ import http from 'http';
 import mongoose from 'mongoose';
 import database from './config/database.js'
 import adminRoutes from './routes/admin/index.js'
+import userRoutes from './routes/user/index.js'
+import crypto from 'crypto'
 let app = express();
 let PORT = 8000
 
@@ -26,6 +28,7 @@ app.get('/', (req,res) => {
     res.send("Server connected successfully!")
 })
 app.use('/api/admin', adminRoutes);
+app.use('/api/user', userRoutes);
 
 
 server.listen(PORT, function(err) {

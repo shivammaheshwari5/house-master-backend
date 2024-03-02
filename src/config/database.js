@@ -6,8 +6,8 @@ const database = {
     name: process.env.DB_NAME || 'house-master',
     replica: process.env.DB_REPLICA || false
 };
-//  database.uri =  `mongodb://yadavharinandan980:t9LTh5Jw7unKjcRW@ac-3uih9di-shard-00-00.esx4wuj.mongodb.net:27017,ac-3uih9di-shard-00-01.esx4wuj.mongodb.net:27017,ac-3uih9di-shard-00-02.esx4wuj.mongodb.net:27017/?ssl=true&replicaSet=atlas-k8yauc-shard-0&authSource=admin&retryWrites=true&w=majority`
- database.uri = `mongodb://${database.host}/${database.name}`;
+ database.uri =  `mongodb+srv://housemasterindia:wivXwc9CDxvctjur@housemaster.n4qnnn1.mongodb.net/HouseMaster?retryWrites=true&w=majority&appName=HouseMaster`
+//  database.uri = `mongodb://${database.host}/${database.name}`;
 if (database.user !== '') database.uri = `mongodb://${database.user}:${encodeURIComponent(database.password)}@${database.host}:${database.port}/${database.name}?authSource=admin`;
 
 export default database;

@@ -7,5 +7,6 @@ router.get('/seo', manageSeo.getSeos)
     .post('/seo', manageSeo.addOrEditSeo)
     .put('/seo/:seoId', manageSeo.addOrEditSeo)
     .delete('/seo/:seoId', manageSeo.deleteSeo)
+    .get('/seo/:key', manageSeo.getSeoByPath)
 
 export default router;
